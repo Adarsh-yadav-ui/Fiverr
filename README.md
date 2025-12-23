@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fiverr
 
-## Getting Started
+A **Pinterest-style clone** built with **Next.js**, **Convex**, and **Clerk**, designed for fast performance, modern UI, and scalable real-time features. This project demonstrates a full-stack application with authentication, database, and interactive feeds.
 
-First, run the development server:
+---
+
+## 🚀 Tech Stack
+
+* **Next.js** – App Router, Server Components, optimized performance
+* **Convex** – Real-time backend & database
+* **Clerk** – Authentication & user management
+* **TypeScript** – Type-safe development
+* **Tailwind CSS** – Modern, responsive UI styling
+
+---
+
+## ✨ Features
+
+* 🔐 Secure authentication (Sign in / Sign up) using Clerk
+* 📌 Pinterest-style feed layout
+* ⚡ Real-time data updates with Convex
+* 🖼️ Image-based posts (pins)
+* ❤️ Like & interact with posts
+* 🧑 User profiles
+* 📱 Fully responsive design
+
+---
+
+## 📁 Project Structure
+
+```
+fiverr/
+├── app/                # Next.js App Router
+├── components/         # Reusable UI components
+├── convex/             # Convex backend functions & schema
+├── lib/                # Utility functions
+├── public/             # Static assets
+├── styles/             # Global styles
+├── middleware.ts       # Clerk middleware
+└── package.json
+```
+
+---
+
+## 🛠️ Installation & Setup
+
+This project uses **Bun** as the package manager and runtime.
+
+### 1️⃣ Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+git clone https://github.com/Adarsh-yadav-ui/Fiverr.git
+cd Fiverr
+```
+
+### 2️⃣ Install dependencies (using Bun)
+
+```bash
+bun install
+```
+
+### 3️⃣ Environment Variables
+
+Create a `.env.local` file and add the following:
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CONVEX_URL=
+```
+
+> Make sure you have a Convex project and Clerk application set up.
+
+---
+
+### 4️⃣ Run the development server
+
+```bash
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open **[http://localhost:3000](http://localhost:3000)** in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Convex Setup
 
-## Learn More
+```bash
+npx convex dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+This starts the Convex backend and syncs your functions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔐 Authentication Flow
 
-## Deploy on Vercel
+* Clerk handles authentication and session management
+* Middleware protects private routes
+* User data is synced with Convex
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎯 Future Improvements
+
+* 🔍 Search functionality
+* 💬 Comments on posts
+* 📂 Boards / collections
+* 🚀 Infinite scrolling
+* 🌙 Dark mode
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork the repository and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 🙌 Acknowledgements
+
+* Next.js Team
+* Convex.dev
+* Clerk.dev
+* Pinterest (UI inspiration)
+
+---
+
+⭐ If you like this project, consider giving it a star on GitHub!
