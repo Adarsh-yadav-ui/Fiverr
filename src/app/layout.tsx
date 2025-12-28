@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { DM_Sans, Geist, Geist_Mono, Inter } from "next/font/google";
+import { DM_Sans, Inter } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
+import ConvexClientProvider from "@/providers/convex-client-proivder";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -20,10 +22,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={inter.variable}>
-      <body className={`${dm_sans.className} ${dm_sans.style} antialiased`}>
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <ConvexClientProvider>
+        <html lang="en" suppressHydrationWarning className={inter.variable}>
+          <body className={`${dm_sans.className} ${dm_sans.style} antialiased`}>
+            {children}
+          </body>
+        </html>
+      </ConvexClientProvider>
+    </ClerkProvider>
   );
 }
