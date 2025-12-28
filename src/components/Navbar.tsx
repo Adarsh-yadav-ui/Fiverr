@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-// import { Authenticated, Unauthenticated } from "convex/react";
-// import { SignIn, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
-// import UserStored from "./UserStored";
+import { Authenticated, Unauthenticated } from "convex/react";
+import { SignIn, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import UserStored from "./UserStored";
 import { ArrowRight } from "lucide-react";
 
 const navItems = [
@@ -51,26 +51,23 @@ export const Navbar = () => {
         <div className="flex items-center space-x-3">
           {/* <ModeToggle /> */}
 
-          {/* <div className="flex items-center">
+          <div className="flex items-center">
             <Authenticated>
               <UserStored />
               <Button>
-                <Link href="/dashboard">
-                  Dashboard
-                  <ArrowRight className="ml-2 hover:ml-4 transition-transform duration-300" />
-                </Link>
+                <Link href="/dashboard">Dashboard</Link>
               </Button>
               <UserButton />
             </Authenticated>
             <Unauthenticated>
-              <Button>
+              <Button className="mr-2">
                 <SignInButton mode="modal" />
               </Button>
               <Button>
                 <SignUpButton mode="modal" />
               </Button>
             </Unauthenticated>
-          </div> */}
+          </div>
         </div>
       </nav>
     </header>
